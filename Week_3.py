@@ -9,7 +9,7 @@ perm_list = [0,4,8,12,1,5,9,13,2,6,10,14,3,7,11,15]
 hex_list = ['{0:04b}'.format(int(t,16)) for t in string.hexdigits[:16].upper()]
 @decorator
 def inv_sub(x):
-    '''This will be used in the differential cryptanalysis'''
+    '''This will be the inverse of the substitution function used in the SPN'''
     hex_dict = {hex_list[sub_list[i]]:hex_list[i] for i in range(16)}
     return hex_dict[x]
 

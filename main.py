@@ -1,6 +1,6 @@
 
 ### Week 1 problems:
-# In order to jump between numbs and letters we start the following class which we use in lots of
+# In order to jump between numbers and letters we start the following class which we use in lots of
 # further examples.
 import string
 class alpha_numeric():
@@ -43,6 +43,9 @@ class Caeser_solver(alpha_numeric):
         for i in range(len(num)):
             str += self.num_to_let(num[i])
         return str
+
+
+### Now apply this to the cipher given in tutorials
 # cipher_1 = 'WKHPDJLFZRUGVDUHVTXHDPLVKRVVLIUDJH'
 # Caeser = Caeser_solver(cipher_1)
 
@@ -56,7 +59,7 @@ class Caeser_solver(alpha_numeric):
 ## Third cipher type: Substitution cipher
 # Here we want to try to use frequency analysis. Rather than defining a class to decode
 # we define a class to help with frequency analysis.
-import os
+
 
 ### The following frequency analysis was stolen from wikipedia
 frequency_ordering_in_text = 'ETAOINSHRDLCUMWFGYPBVKJXQZ'
@@ -91,7 +94,7 @@ class Freq_analy(alpha_numeric):
 # cipher_3 = 'AGBAPZTGELGPTIPMGHQCGAECHZFVCEXXGLYIGHEULTQATQHPUFEUYGZZEVGUYHGUYIPUYIGQUGYIPYEAYIGFNKTYYCEGLYIGFSQKZLEUMGUYPSEXIGCYIPYUQQUGSQKZLDCGPO'
 # Substitution = Freq_analy(cipher_3)
 ### message is short enough that this does a terrible job. Only gets the top two most frequent letters right.
-
+#import os
 # root = r'C:\Users\lrr27\PycharmProjects\CM30173_Tutorials'
 # file = r'substitute.txt'
 # import re
@@ -104,7 +107,7 @@ class Freq_analy(alpha_numeric):
 # Longer_sub = Freq_analy(long_sub_cipher)
 # print(original)
 # print(len(original))
-
+### Frequency analysis can't even do that great a job on th first 5 pages of harry potter
 
 
 
