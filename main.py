@@ -94,6 +94,8 @@ class Freq_analy(alpha_numeric):
 # cipher_3 = 'AGBAPZTGELGPTIPMGHQCGAECHZFVCEXXGLYIGHEULTQATQHPUFEUYGZZEVGUYHGUYIPUYIGQUGYIPYEAYIGFNKTYYCEGLYIGFSQKZLEUMGUYPSEXIGCYIPYUQQUGSQKZLDCGPO'
 # Substitution = Freq_analy(cipher_3)
 ### message is short enough that this does a terrible job. Only gets the top two most frequent letters right.
+
+### We will try to decipher a substitution of the first 5 pages of Harry Potter using frequency analysis.
 #import os
 # root = r'C:\Users\lrr27\PycharmProjects\CM30173_Tutorials'
 # file = r'substitute.txt'
