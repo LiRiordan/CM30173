@@ -35,15 +35,14 @@ def sub(x):
     sub_dict = {hex_list[i]:hex_list[sub_list[i]] for i in range(16)}
     return sub_dict[x]
 
-# print(distribution_array(sub))
-# At this point often helpful to draw permutation
+print(distribution_array(sub))
+### At this point often helpful to draw permutation
 ### Possible differential trail '1110|0000|0000|0000' -> '0000|0110|0110|0000' (can be found
 ### in lecturer's notes)
-### We will also use one found by exploiting symmetries of the permutation
+### We will also use one found by exploiting symmetries of the permutation given by 00b0 -> 9009
 
 
-### First round will be:
-# print(f'Differential trail given by {0x00b0:0>16b} -> {0x9009:0>16b}')
+### First round will be: {0x00b0:0>16b} -> {0x9009:0>16b}
 ### This happens with the same probability as the one given in the course: 81/4096
 X_diff = f'{0x00b0:0>16b}'
 Y_diff = f'{0x9009:0>16b}'
@@ -52,7 +51,7 @@ k_1 = '1110011101100111'
 k_2 = '0111011001111001'
 k_3 = '0110011110010000'
 k_4 = '0111100100000011'
-k_5 = f'{0xf5c7:0>16b}'  #this is the bit we will guess
+k_5 = f'{0xf5c7:0>16b}'  ###this is the bit we will guess
 ### We start by generating a large number of plaintexts of length 16, their difference partners
 ### and their cipher differences.
 start = []
@@ -86,7 +85,7 @@ Output = sorted(Output,key = lambda x:x[1], reverse = True)
 
 
 ### We now perform an attack using the other differential trail
-# e000 -> 0660 with probability 81/4096
+### e000 -> 0660 with probability 81/4096
 
 x_2_diff = f'{0xe000:0>16b}'
 y_2_diff = f'{0x0660:0>16b}'
