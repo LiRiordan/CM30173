@@ -97,7 +97,7 @@ class Freq_analy(alpha_numeric):
 
 ### We will try to decipher a substitution of the first 5 pages of Harry Potter using frequency analysis.
 #import os
-# root = r'C:\Users\lrr27\PycharmProjects\CM30173_Tutorials'
+# root = r'CM30173/main' ### change this to be the root wherever you have the files substitute.txt and real.txt
 # file = r'substitute.txt'
 # import re
 # with open(os.path.join(root,file)) as text:
