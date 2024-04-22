@@ -29,6 +29,8 @@ def chinese_remainder(vals: list[int], modular: list[int]) -> list[int]:
     return [t,n_prod]
 
 
+
+
 plaintext = 19
 keys = [[26, 3], [33, 3], [35, 3]]
 modular = [keys[i][0] for i in range(len(keys))]
@@ -88,13 +90,16 @@ def shanks_algorithm(n: int, alpha: int, beta: int) -> int:
                 return (a[0]*m + b[0]) % n
 
 
-alpha = 106
-beta = 12375
-n = 24691
+alpha = 6  #106
+beta =  248388 #12375
+n =  458009  #24691
 
 j = shanks_algorithm(n, alpha, beta)
-print(j)
-print((alpha**j) % n)
+### Solutions:
+## 106^(22392) = 12375 mod 24691
+## 6^(232836) = 248388 mod 458009
+
+
 
 
 
